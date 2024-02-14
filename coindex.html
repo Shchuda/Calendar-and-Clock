@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Set viewport meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the webpage -->
+    <title>Calendar and Clock</title>
+    <!-- Link the external stylesheet for the calendar and clock -->
+    <link rel="stylesheet" href="costyle.css">     
+</head>
+<body>
+<!-- Main container with class 'container' -->
+<div class="container">
+    <!-- Calendar container with class 'calendar' -->
+    <div class="calendar">
+        <!-- Left section of the calendar -->
+        <div class="left">
+            <!-- Paragraph element to display the date -->
+            <p id="date">01</p>
+            <!-- Paragraph element to display the day of the week -->
+            <p id="day">Sunday</p>
+        </div>
+        <!-- Right section of the calendar -->
+        <div class="right">
+            <!-- Paragraph element to display the month -->
+            <p id="month">January</p>
+            <!-- Paragraph element to display the year -->
+            <p id="year">2020</p>
+        </div>
+    </div>
+    <!-- Clock container with class 'clock' -->
+    <div class="clock">
+        <!-- Hour hand container with class 'hour' -->
+        <div class="hour">
+            <!-- Hour hand with class 'hr' and id 'hr' -->
+            <div class="hr" id="hr"></div>
+        </div>
+        <!-- Minute hand container with class 'min' -->
+        <div class="min">
+            <!-- Minute hand with class 'mn' and id 'mn' -->
+            <div class="mn" id="mn"></div>
+        </div>
+        <!-- Second hand container with class 'sec' -->
+        <div class="sec">
+            <!-- Second hand with class 'sc' and id 'sc' -->
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+</div>
+<!-- Link the external JavaScript file for the calendar and clock -->
+<script src="coindex.js"></script>
+</body>
+</html>
