@@ -2,5 +2,6 @@
 
 Built using HTML, CSS and JavaScript
 
-<img src="https://github.com/Shchuda/Calendar-and-Clock/assets/137898720/4390f307-4b63-42ac-94b8-e0fa5ad73a5b" width="550" height="300" />
+<img src="https://github.com/Shchuda/Calendar-and-Clock/assets/137898720/ac837690-7073-4d91-8a6e-0b2992814e8a" width="550" height="300" />
+
 
