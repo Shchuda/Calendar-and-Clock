@@ -1,45 +1,46 @@
-/* JavaScript for the calendar */
+// Get the clock elements
+var hoursElement = document.getElementById('hours');
+var minutesElement = document.getElementById('min');
 
-// Get references to HTML elements for displaying date information
+// Function to update the clock
+function updateClock() {
+    // Get the current time
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+
+    // Pad single digit numbers with a leading zero
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+    // Update the clock display
+    hoursElement.textContent = hours;
+    minutesElement.textContent = minutes;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Update the clock immediately on page load
+updateClock();
+
+// Calendar //
+// Get references to HTML elements
 const date = document.getElementById("date");
 const day = document.getElementById("day");
 const month = document.getElementById("month");
 const year = document.getElementById("year");
 
-// Create a new Date object representing today's date
+// Get today's date
 const today = new Date();
 
-// Arrays to store names of weekdays and months
+// Array of week days and months
 const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const allMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-// Display date information in the HTML elements
-date.innerHTML = (today.getDate() < 10 ? "0" : "") + today.getDate();
-day.innerHTML = weekDays[today.getDay()];
-month.innerHTML = allMonths[today.getMonth()];
-year.innerHTML = today.getFullYear();
-
-
-/* JavaScript for the clock */
-
-// Get references to HTML elements representing clock hands
-const hr = document.querySelector('#hr');
-const mn = document.querySelector('#mn');
-const sc = document.querySelector('#sc');
-
-// Update clock hands every second
-setInterval(() => {
-    // Create a new Date object representing the current time
-    let day = new Date();
-
-    // Calculate rotation angles for hour, minute, and second hands
-    let hh = day.getHours() * 30;
-    let mm = day.getMinutes() * 6;
-    let ss = day.getSeconds() * 6;
-
-    // Apply rotation transformations to clock hands
-    hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
-    mn.style.transform = `rotateZ(${mm}deg)`;
-    sc.style.transform = `rotateZ(${ss}deg)`;
-});
+// Set innerHTML of date, day, month, and year elements to display today's date
+date.innerHTML = (today.getDate() < 10 ? "0" : "") + today.getDate(); // Add leading zero if date is single digit
+day.innerHTML = weekDays[today.getDay()]; // Display the day of the week
+month.innerHTML = allMonths[today.getMonth()]; // Display the month
+year.innerHTML = today.getFullYear(); // Display the year
 
